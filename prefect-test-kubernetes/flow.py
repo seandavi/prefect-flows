@@ -18,7 +18,7 @@ with Flow("hello-flow") as flow:
 # and set a custom image
 flow.run_config = KubernetesRun(
     env={"SOME_VAR": "VALUE"},
-    image="prefecthq/prefect"
+    image="gcr.io/omicidx-338300/prefect-gcp-base"
 )
 
 flow.storage = GitHub(repo='seandavi/prefect-flows', path='prefect-test-kubernetes/flow.py')
