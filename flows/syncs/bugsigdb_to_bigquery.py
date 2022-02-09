@@ -47,6 +47,7 @@ def github_download():
 
     job_config = bigquery.LoadJobConfig(
         source_format=bigquery.SourceFormat.CSV,
+        write_disposition=bigquery.WriteDisposition.WRITE_TRUNCATE,
         skip_leading_rows=1,
         autodetect=True,
         allow_quoted_newlines=True,
