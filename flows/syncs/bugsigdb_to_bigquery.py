@@ -56,7 +56,7 @@ flow.run_config = KubernetesRun(
      image="gcr.io/omicidx-338300/prefect-gcp-base"
 )
 
-flow.storage = GitHub(repo='seandavi/prefect-flows', path='flows/prefect-test-kubernetes/flow.py')
+flow.storage = GitHub(repo='seandavi/prefect-flows', path='flows/syncs/bugsigdb_to_bigquery.py')
 
 flow.register('testing')
 
