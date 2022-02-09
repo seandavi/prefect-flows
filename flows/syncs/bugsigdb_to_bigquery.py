@@ -60,7 +60,7 @@ def github_download():
     job.result()  # Waits for the job to complete.
 
     table = client.get_table(table_id)  # Make an API request.
-    print(
+    logger.info(
         "Loaded {} rows and {} columns to {}".format(
             table.num_rows, len(table.schema), table_id
         )
