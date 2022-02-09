@@ -10,7 +10,7 @@ def hello_task():
     logger = prefect.context.get("logger")
     logger.info("Hello world!")
 
-with Flow("hello-flow") as flow:
+with Flow("prefect-test-kubernetes") as flow:
     hello_task()
 
 
@@ -21,7 +21,7 @@ flow.run_config = KubernetesRun(
     image="gcr.io/omicidx-338300/prefect-gcp-base"
 )
 
-flow.storage = GitHub(repo='seandavi/prefect-flows', path='prefect-test-kubernetes/flow.py')
+flow.storage = GitHub(repo='seandavi/prefect-flows', path='flows/prefect-test-kubernetes/flow.py')
 
-flow.register('testing')
+flow.register('testing', description='This is just to test kubernetes running.')
 
