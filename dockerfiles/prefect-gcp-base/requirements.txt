@@ -2,3 +2,5 @@ prefect
 prefect[dev, viz, google, kubernetes, templates, github]
 google-cloud-storage
 google-cloud-bigquery
+httpx
+pandas
