@@ -52,7 +52,7 @@ def github_download():
         allow_quoted_newlines=True,
     )
 
-    source_file = "full_dump_fixed.csv"
+    file_path = "full_dump_fixed.csv"
 
     with open(file_path, "rb") as source_file:
         job = client.load_table_from_file(source_file, table_id, job_config=job_config)
